@@ -8,10 +8,10 @@
  * - Ітерація
  */
 
-const arrayNum = [1, 15, 94, 0, 1, 15];
-const arrayNames = ['Bogdan', 'Ira', 'Olga'];
+// const arrayNum = [1, 15, 94, 0, 1, 15];
+// const arrayNames = ['Bogdan', 'Ira', 'Olga'];
 
-console.log(arrayNames[3]);
+// console.log(arrayNames[3]);
 
 /*
  * Передача по посиланню і по значенню
@@ -25,6 +25,20 @@ console.log(arrayNames[3]);
  * - for...of - якщо індекс не потрібен і в масиві нічого змінювати не потрібно
  */
 
+const names = ['Bogdan', 'Ira', 'Olga'];
+
+for (let i = 0; i < names.length; i += 1) {
+  console.log(`name: `, names[i]);
+  //   names[i] += '-1';
+}
+
+// console.log(names);
+
+for (let name of names) {
+  console.log(`name: `, name);
+  name += '-1';
+}
+console.log(names);
 // Методи split() і join()
 
 // Методи indexOf() і includes()
