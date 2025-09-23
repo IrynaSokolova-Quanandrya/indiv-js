@@ -25,21 +25,29 @@
  * - for...of - якщо індекс не потрібен і в масиві нічого змінювати не потрібно
  */
 
+// const names = ['Bogdan', 'Ira', 'Olga'];
+
+// for (let i = 0; i < names.length; i += 1) {
+//   console.log(`name: `, names[i]);
+//   //   names[i] += '-1';
+// }
+
+// // console.log(names);
+
+// for (let name of names) {
+//   console.log(`name: `, name);
+//   name += '-1';
+// }
+// console.log(names);
+// Методи split() і join()
+
 const names = ['Bogdan', 'Ira', 'Olga'];
 
-for (let i = 0; i < names.length; i += 1) {
-  console.log(`name: `, names[i]);
-  //   names[i] += '-1';
-}
+const joinedNames = names.join(', ');
+console.log(joinedNames);
 
-// console.log(names);
-
-for (let name of names) {
-  console.log(`name: `, name);
-  name += '-1';
-}
-console.log(names);
-// Методи split() і join()
+const str = 'Hello, world!';
+console.log(str.split(' '));
 
 // Методи indexOf() і includes()
 

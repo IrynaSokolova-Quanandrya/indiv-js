@@ -4,13 +4,6 @@
  * Нехай елементи массива  в рядку будут розділені комою.
  */
 
-const str = "Hello world!"
-const strArr = str.split(' ');
-console.log(strArr);
-const strJoin = strArr.join(' ');
-console.log(strJoin);
-
-
 const friends = ['Mango', 'Poly', 'Kiwi', 'Ajax'];
 
 let string = '';
