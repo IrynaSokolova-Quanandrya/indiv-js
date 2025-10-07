@@ -7,46 +7,52 @@
  */
 
 const cards = [
-    'Карточка-1',
-    'Карточка-2',
-    'Карточка-3',
-    'Карточка-4',
-    'Карточка-5',
-  ];
-  
-  console.table(cards);  
+  'Карточка-1',
+  'Карточка-2',
+  'Карточка-3',
+  'Карточка-4',
+  'Карточка-5',
+];
 
-  /*
-   * Видалення (по індексу), метод indexOf()
-   */
-  const cardToRemove = 'Карточка-3';
+console.table(cards);
 
-  const index = cards.indexOf(cardToRemove) 
-  console.log(index);
+/*
+ * Видалення (по індексу), метод indexOf()
+ */
+const cardToRemove = 'Карточка-3';
 
-  cards.splice(index, 1)
-  console.log(cards);
+let index = cards.indexOf(cardToRemove);
+let splice = cards.splice(index, 1);
 
-  /*
-   * Додавання (по індексу)
-   */
-  
+const deleteCard = function (cardsArr, card) {
+  let index = cardsArr.indexOf(card);
+  let splice = cardsArr.splice(index, 1);
+
+  return cardsArr;
+};
+
+deleteCard(cards, cardToRemove);
+deleteCard(['card1', 'card2', 'card3'], 'card2');
+deleteCard([1, 3, 5, 10], 10);
+
+/*
+ * Додавання (по індексу)
+ */
+
 const cardToInsert = 'Карточка-6';
 
 cards.push(cardToInsert);
 console.log(cards);
 
-  /*
-   * Оновлення (по індексу)
-   */
-  const cardToUpdate = 'Карточка-4';
-  const idx = cards.indexOf(cardToUpdate)
+/*
+ * Оновлення (по індексу)
+ */
+const cardToUpdate = 'Карточка-4';
+const idx = cards.indexOf(cardToUpdate);
 
-  cards.splice(idx, 1, cardToInsert)
+cards.splice(idx, 1, cardToInsert);
 
-  console.log(cards);
-
-
+console.log(cards);
 
 const x = 5;
 const y = 10;

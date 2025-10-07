@@ -7,14 +7,23 @@
  * - Поверненнф значення
  * - Параметри за замовчуванням
  */
+const str = 'hello';
+const number = 5;
 
-function logName(name, age) {
+// logName('Bogdan', 15);
+// logName('Ira');
+// logName('Danylo');
+
+// Оголошення функції (function declaration)
+// function logName(name, age) {
+//   console.log(name, age);
+// }
+
+// Функціональний вираз (function expression)
+
+const logName = function (name, age) {
   console.log(name, age);
-}
-
-logName('Bogdan', 15);
-logName('Ira');
-logName('Danylo');
+};
 
 // console.log('hello');
 // console.log('hi');
@@ -24,19 +33,33 @@ logName('Danylo');
  * - Stack trace і пошук помилок
  */
 
-// const fnA = function() {
-//   console.log('Почала виконуватися [fnA]');
-//   fnB();
-//   console.log('Продовжила виконуватися [fnA] після виходу з [fnB]');
-// };
+const fnA = function () {
+  console.log('Почала виконуватися [fnA]');
+  fnB();
+  console.log('Продовжила виконуватися [fnA] після виходу з [fnB]');
+};
 
-// const fnB = function() {
-//   console.log('Виконується [fnB]');
-// };
+const fnB = function () {
+  console.log('Виконується [fnB]');
+};
 
-// console.log('Почав виконання [main]');
-// fnA();
-// console.log('Продовжив виконуватися [main] після виходу з [fnA]');
+console.log('Почав виконання [main]');
+fnA();
+console.log('Продовжив виконуватися [main] після виходу з [fnA]');
+
+function name1(params) {
+  console.log(1);
+}
+
+function name2(params) {
+  name1();
+  console.log(2);
+}
+
+name2();
+console.log(3);
+
+// result - 1, 2, 3
 
 // Створіть масив styles з елементами 'Джаз' i 'Блюз'.
 // Додайте 'Рок-н-ролл' в кінець масиву.
