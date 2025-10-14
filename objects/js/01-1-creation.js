@@ -9,7 +9,13 @@ const movie = {
   title: 'Harry Potter',
   author: 'Joan Rowling',
   pages: 354,
+  changeTitle(newTitle) {
+    this.title = newTitle;
+  },
 };
+
+movie.changeTitle('New title');
+movie.changeTitle('new title 2');
 
 console.log(movie);
 
